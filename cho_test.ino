@@ -22,6 +22,7 @@ void loop() {
 
   distance=pulseIn(echo,HIGH)/58;
   Serial.println("Distance="+String(distance));
+  Serial.printf("한해인바보");
   delay(1000);
 
 }

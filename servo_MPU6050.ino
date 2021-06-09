@@ -13,10 +13,9 @@ void setup() {
   Wire.write(0x6B);
   Wire.write(1);
   Wire.endTransmission(true);
-
+  Serial.begin(9600);
   servo.attach(servoPin);
   servo.write(0);
-  Serial.begin(115200);
   delay(2000);
 
 }

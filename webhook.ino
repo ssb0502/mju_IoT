@@ -78,14 +78,14 @@ void loop() {
    digitalWrite(ledPin, HIGH);
    
     //정상체온일때
-    if(temperature>=30.0 && temperature<=36.5)
+    if(temperature>=30.0 && temperature<=34.5)
     {
      servofunc();                   
     }
 
     //정상체온 아닐때
     else{ 
-     snprintf(Buffer, sizeof(Buffer), "%d", temperature);
+     snprintf(Buffer, sizeof(Buffer), "%f", temperature);
      send_webhook("Temperature", "cX8K0ynAZZJVf6_7UGgQVK",Buffer,"","");
      delay(15);
     }
@@ -93,5 +93,5 @@ void loop() {
    delay(3000);
   }
   else digitalWrite(ledPin, LOW); 
-  delay(10000);
+  delay(1000);
 }
